@@ -34,8 +34,8 @@ export default function LoadingExperience({ onComplete }: { onComplete?: () => v
         >
           <div className="flex flex-col items-center text-center">
             <motion.h1
-              initial={{ opacity: 0, y: 15, tracking: "0.2em" }}
-              animate={{ opacity: 1, y: 0, tracking: "0.35em" }}
+              initial={{ opacity: 0, y: 15, letterSpacing: "0.2em" }}
+              animate={{ opacity: 1, y: 0, letterSpacing: "0.35em" }}
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="font-serif text-4xl sm:text-6xl text-para-ivory font-light uppercase"
             >
