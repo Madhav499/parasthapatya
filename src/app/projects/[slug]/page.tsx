@@ -1,14 +1,10 @@
-"use client";
-
-import { use } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { PROJECTS, Project } from "@/data/projects";
 
-export default function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-  const resolvedParams = use(params);
-  const project = PROJECTS.find((p) => p.slug === resolvedParams.slug);
+export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
+  const project = PROJECTS.find((p) => p.slug === params.slug);
 
   if (!project) {
     notFound();

@@ -10,20 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         para: {
-          ivory: "#F9F8F3",
-          "ivory-light": "#FDFCFA",
-          "ivory-dark": "#ECE7DE",
-          sandstone: "#D8C7B5",
-          "sandstone-light": "#E9DFD3",
-          stone: "#C2B29F",
-          charcoal: "#141412",
-          "charcoal-light": "#1E1E1B",
-          "charcoal-muted": "#2A2A26",
+          charcoal: "#050505",
+          "charcoal-light": "#0B0B0B",
+          "charcoal-muted": "#161616",
+          ivory: "#F2EEE7",
+          "ivory-light": "#F8F6F2",
+          "ivory-dark": "#E5DFD5",
+          sandstone: "#D4C4B2",
+          stone: "#B5A492",
           bronze: "#8C7456",
-          "bronze-light": "#A89070",
-          terracotta: "#A35238",
-          saffron: "#C46E3A",
-          gold: "#C9A768",
+          "bronze-muted": "#6E5B44",
+          terracotta: "#9C4C33",
         },
       },
       fontFamily: {
@@ -39,21 +36,6 @@ const config: Config = {
       letterSpacing: {
         widest: "0.25em",
         ultra: "0.4em",
-      },
-      animation: {
-        "subtle-zoom": "subtleZoom 25s ease-in-out infinite alternate",
-        "float": "float 6s ease-in-out infinite",
-        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-      },
-      keyframes: {
-        subtleZoom: {
-          "0%": { transform: "scale(1)" },
-          "100%": { transform: "scale(1.08)" },
-        },
-        float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
       },
       transitionTimingFunction: {
         "architectural": "cubic-bezier(0.25, 1, 0.5, 1)",

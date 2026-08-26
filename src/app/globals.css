@@ -13,8 +13,8 @@
 /* Base resets & Luxury architectural styling */
 html {
   scroll-behavior: auto !important;
-  background-color: #141412;
-  color: #F9F8F3;
+  background-color: #050505;
+  color: #F2EEE7;
   font-family: var(--font-sans);
 }
 
@@ -22,32 +22,34 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  background-color: #050505;
+  color: #F2EEE7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #141412;
+  background: #050505;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #8C7456;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D8C7B5;
+  background: #D4C4B2;
 }
 
 /* Selection color */
 ::selection {
   background-color: #8C7456;
-  color: #F9F8F3;
+  color: #F2EEE7;
 }
 
 /* Lenis smooth scrolling class setup */

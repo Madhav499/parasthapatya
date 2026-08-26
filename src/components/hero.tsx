@@ -14,10 +14,10 @@ export default function Hero() {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      // Slow zoom effect on image as scroll progresses
+      // Controlled subtle scale from 1.05 to 1.00 on scroll
       gsap.fromTo(
         imageRef.current,
-        { scale: 1.08 },
+        { scale: 1.05 },
         {
           scale: 1.0,
           ease: "none",
@@ -30,10 +30,10 @@ export default function Hero() {
         }
       );
 
-      // Subtle upward parallax for text content
+      // Subtle upward motion for hero typography
       gsap.to(contentRef.current, {
-        y: -60,
-        opacity: 0.7,
+        y: -40,
+        opacity: 0.8,
         ease: "none",
         scrollTrigger: {
           trigger: containerRef.current,
@@ -50,9 +50,9 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen w-full overflow-hidden bg-para-charcoal flex items-center justify-center select-none"
+      className="relative h-screen w-full overflow-hidden bg-[#050505] flex items-center justify-center select-none"
     >
-      {/* Background Architectural Image with subtle luxury overlay */}
+      {/* Background Architectural Photography with deep black canvas overlay */}
       <div
         ref={imageRef}
         className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-1000"
@@ -62,17 +62,10 @@ export default function Hero() {
         }}
         data-cursor="explore"
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-para-charcoal via-para-charcoal/50 to-para-charcoal/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-[#050505]/50" />
       </div>
 
-      {/* Grid Overlay Lines (Architectural Grid Motif) */}
-      <div className="absolute inset-0 pointer-events-none opacity-20 flex justify-between max-w-[1600px] mx-auto px-6 sm:px-12">
-        <div className="w-[1px] h-full bg-para-sandstone/30"></div>
-        <div className="w-[1px] h-full bg-para-sandstone/30 hidden md:block"></div>
-        <div className="w-[1px] h-full bg-para-sandstone/30"></div>
-      </div>
-
-      {/* Hero Typography Content */}
+      {/* Hero Content Layer */}
       <div
         ref={contentRef}
         className="relative z-10 max-w-[1600px] w-full mx-auto px-6 sm:px-12 flex flex-col justify-center items-start pt-20"
@@ -80,17 +73,17 @@ export default function Hero() {
         <div className="inline-flex items-center space-x-3 mb-6">
           <span className="w-8 sm:w-12 h-[1px] bg-para-bronze"></span>
           <span className="font-sans text-[10px] sm:text-xs tracking-ultra uppercase text-para-sandstone font-medium">
-            RAJКOT — GUJARAT — INDIA
+            PARĀ — THE STHAPATYA STUDIO
           </span>
         </div>
 
-        <h1 className="font-serif text-hero-title font-light text-para-ivory leading-[0.9] tracking-tight mb-8">
+        <h1 className="font-serif text-hero-title font-light text-para-ivory leading-[0.92] tracking-tight mb-8">
           SPACES WITH <br />
           <span className="italic font-normal text-para-sandstone">SOUL.</span>
         </h1>
 
         <p className="font-sans text-sm sm:text-lg text-para-ivory/80 max-w-xl font-light leading-relaxed mb-10">
-          Architecture, interiors and spatial sanctuaries shaped around the way you live, work and inhabit harmony.
+          Contemporary architecture, interior sanctuaries, and spatial environments shaped around the way you live.
         </p>
 
         <div className="flex flex-wrap gap-4 sm:gap-6 items-center">
@@ -112,10 +105,10 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Hero Bottom Bar Details */}
+      {/* Bottom Bar Details */}
       <div className="absolute bottom-8 left-0 right-0 z-10 max-w-[1600px] mx-auto px-6 sm:px-12 flex items-center justify-between text-para-sandstone/70 font-sans text-[10px] sm:text-xs tracking-widest uppercase">
-        <div>PARĀ — THE STHAPATYA STUDIO</div>
-        <div className="flex items-center space-x-2 animate-bounce">
+        <div>RAJKOT — GUJARAT — INDIA</div>
+        <div className="flex items-center space-x-2 animate-pulse">
           <span>SCROLL TO EXPLORE</span>
           <span>↓</span>
         </div>

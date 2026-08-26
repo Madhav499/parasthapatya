@@ -13,14 +13,14 @@ const INSTAGRAM_POSTS = [
 
 export default function InstagramSection() {
   return (
-    <section className="py-24 sm:py-32 bg-para-ivory text-para-charcoal relative overflow-hidden border-b border-para-charcoal/5">
+    <section className="py-24 sm:py-32 bg-[#0B0B0B] text-para-ivory relative overflow-hidden border-b border-para-charcoal-muted">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-12 mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
         <div>
           <span className="font-sans text-xs tracking-ultra uppercase text-para-bronze font-bold block mb-2">
             12 — SOCIAL ARCHIVE
           </span>
-          <h2 className="font-serif text-3xl sm:text-5xl font-light text-para-charcoal">
-            FROM THE <span className="italic text-para-bronze">STUDIO.</span>
+          <h2 className="font-serif text-3xl sm:text-5xl font-light text-para-ivory">
+            FROM THE <span className="italic text-para-sandstone">STUDIO.</span>
           </h2>
         </div>
 
@@ -28,7 +28,7 @@ export default function InstagramSection() {
           href={STUDIO_INFO.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center space-x-2 font-sans text-xs tracking-widest uppercase text-para-bronze hover:text-para-charcoal transition-colors border-b border-para-bronze/40 pb-1 w-fit"
+          className="inline-flex items-center space-x-2 font-sans text-xs tracking-widest uppercase text-para-sandstone hover:text-para-ivory transition-colors border-b border-para-sandstone/40 pb-1 w-fit"
           data-cursor="cta"
         >
           <span>FOLLOW {STUDIO_INFO.instagramHandle} ON INSTAGRAM</span>
@@ -44,7 +44,7 @@ export default function InstagramSection() {
             href={STUDIO_INFO.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative h-64 sm:h-80 overflow-hidden bg-para-charcoal/5 block"
+            className="group relative h-64 sm:h-80 overflow-hidden bg-para-charcoal border border-para-charcoal-muted block"
             data-cursor="explore"
           >
             <Image
@@ -53,7 +53,7 @@ export default function InstagramSection() {
               fill
               className="object-cover group-hover:scale-108 transition-transform duration-700 ease-architectural"
             />
-            <div className="absolute inset-0 bg-para-charcoal/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center text-para-ivory">
+            <div className="absolute inset-0 bg-[#050505]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center text-para-ivory">
               <p className="font-sans text-xs tracking-wide leading-relaxed">
                 {post.caption}
               </p>

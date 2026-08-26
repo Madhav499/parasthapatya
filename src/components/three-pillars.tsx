@@ -9,7 +9,7 @@ export default function ThreePillars() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-28 sm:py-40 bg-para-charcoal text-para-ivory relative overflow-hidden">
+    <section className="py-28 sm:py-40 bg-[#050505] text-para-ivory relative overflow-hidden border-b border-para-charcoal-muted">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-12">
         {/* Section Header */}
         <div className="flex flex-col space-y-4 mb-16 sm:mb-20">
@@ -57,7 +57,7 @@ export default function ThreePillars() {
               className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
             >
               {/* Left Image Showcase */}
-              <div className="lg:col-span-7 relative h-[380px] sm:h-[500px] lg:h-[600px] w-full overflow-hidden" data-cursor="explore">
+              <div className="lg:col-span-7 relative h-[380px] sm:h-[500px] lg:h-[600px] w-full overflow-hidden border border-para-charcoal-muted bg-para-charcoal-light" data-cursor="explore">
                 <Image
                   src={THREE_PILLARS[activeIndex].image}
                   alt={THREE_PILLARS[activeIndex].title}
@@ -65,7 +65,7 @@ export default function ThreePillars() {
                   className="object-cover transition-transform duration-1000 scale-105"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-para-charcoal/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/80 via-transparent to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8 text-para-ivory">
                   <span className="font-sans text-[10px] tracking-ultra uppercase text-para-sandstone">
                     PARĀ SPATIAL ROOM SEQUENCE 0{activeIndex + 1}
@@ -90,7 +90,7 @@ export default function ThreePillars() {
                   {THREE_PILLARS[activeIndex].description}
                 </p>
 
-                <div className="pt-4 border-t border-para-charcoal-muted/60 flex items-center justify-between font-sans text-xs tracking-widest text-para-sandstone">
+                <div className="pt-4 border-t border-para-charcoal-muted flex items-center justify-between font-sans text-xs tracking-widest text-para-sandstone">
                   <span>CONCEPT {activeIndex + 1} OF 3</span>
                   <button
                     onClick={() => setActiveIndex((prev) => (prev + 1) % THREE_PILLARS.length)}
